@@ -1,0 +1,33 @@
+$theme-colors: (
+	"primary": #252F65,
+	"secondary": #6F3096,
+	"dark": #06114F,
+);
+
+.img-responsive {
+	width: auto;
+	height: 100px;
+}
+
+
+body.modal-open .container{
+    -webkit-filter: blur(4px);
+    -moz-filter: blur(4px);
+    -o-filter: blur(4px);
+    -ms-filter: blur(4px);
+    filter: blur(4px);
+    filter: url("https://gist.githubusercontent.com/amitabhaghosh197/b7865b409e835b5a43b5/raw/1a255b551091924971e7dee8935fd38a7fdf7311/blur");
+filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='4');
+}
+
+#meme-img {
+	width: 200px;
+	height: 200px;
+}
+
+
+input[type="file"] {
+    display: block;
+}
+
+@import "node_modules/bootstrap/scss/bootstrap.scss"
