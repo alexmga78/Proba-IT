@@ -1,0 +1,16 @@
+const jwt = require('jsonwebtoken');
+
+module.exports = (req, res, next) => {
+	try {
+		const token = req.headers.authorization.split(" ")[1];
+		const decoded = jwt.verify(token, process.env.JWT_KEY);
+		req.userData = decoded;
+		console.log(req.body.owner);
+		console.log(decoded._id);
+		if (req.body.owner != decoded._id)
+			return res.status(409).json({ info: "The user should be the owner to create a meme" });
+		next();
+	} catch (error) {
+		return res.status(401).json({ info: "The user should be logged in to create a meme" });
+	}
+};
