@@ -34,7 +34,7 @@ const MemeController = require("../controllers/meme");
 
 router.get('/', MemeController.meme_get_all);
 
-router.get('/:id', checkOwnershipMeme, MemeController.meme_get_byId);
+router.get('/:id', MemeController.meme_get_byId);
 
 router.get('/image/:memeImage', MemeController.meme_get_image_byName);
 

@@ -12,6 +12,11 @@ const memeRoutes = require("./api/routes/meme");
 mongoose.connect('mongodb://127.0.0.1:27017/Users', {
 	useNewUrlParser: true,
 	useUnifiedTopology: true
+})
+.then()
+.catch(err => {
+	console.log(err);
+	console.log("Unable to connect to MongoDB");
 });
 mongoose.Promise = global.Promise;
 
