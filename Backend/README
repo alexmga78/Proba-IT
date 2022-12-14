@@ -1,1 +1,72 @@
+Backend-ul a fost o distractie mai mare decat front-ul, pentru ca imi place de 10 ori mai mult si am putut sa-i dau talpa in weekend cu 14h pe zi (medie pe 3
+zile calculata de mine). Tin sa mentionez ca eram paralel cu js, nu stiam ce e ala node.js si npm si nu intelegeam cum sa folosesc
+Robo 3T :))
 
+Facut cu -javascript
+         -express
+         -morgan
+         -mongodb(mongoose)
+         -bcrypt
+         -multer + storage
+         -jwt
+         -multa dragoste
+         
+Pentru rulare local(npm install [syntax]):
+-fisierele (de pe git)
+-morgan
+-mongoose
+-bcrypt
+
+UPDATE(14.12.2022): catch() pentru eroare in cazul in care da fail la conectarea bazei de date
+
+  VARIANTA EXPLICATA ("-" sunt in ordine cronologica)
+  -server.js -> hostarea cu MongoDB
+  -index.js -> legatura cu MongoDB
+    -initializarea resurselor
+    -redirectarea CRUD-ului (memeRoutes/userRoutes)
+    -catch erroare (in caz ca ajunge aici inseamna ca nu a facut ce trebuie => eroare)
+  -models(meme.js + user.js) -> obiectele cu caracteristicile lor
+    -meme.js
+      -_id -> id-ul meme-ului
+      -description
+      -owner -> id-ul user-ului ce detine/a creat meme-ul
+      -memeImage -> meme-ul
+    -user.js
+      -_id -> id-ul userului
+      -email
+      -username
+      -password
+  -routes(meme.js + user.js) -> CRUD-ul pentru fiecare obiect
+    -redirectionarea catre "functiile" care rezolva CRUD-ul primit
+    -pentru meme.js, in plus, filtrarea formatului de imagine (ne asiguram ca e png)
+  -controllers(meme.js + user.js) -> functiile CRUD
+    -user
+      -user_get_all(get) -> returneaza toti utilizatorii
+      -user_get_byId(get) -> returneaza un utilizator dupa id
+      -user_signin(post) -> creeaza un user nou daca indeplineste conditiile: -sa aiba mail valid(@stud.acs.pub.ro)
+                                                                              -sa nu aibe acelasi username ca si parola
+                                                                              -sa aibe mail, username(pentru username este pusa ca si
+                                                                              comment comanda pentru a fi necesar) si parola
+                                                                              -username/parola sa fie intre 8 si 32 caractere (parola
+                                                                              este criptata cu bcrypt, salt = 12, si abia apoi
+                                                                              introdusa in MongoDB)
+                                                                              -sa nu existe un utilizator care are deja acelasi
+                                                                              emai sau username
+      -user_login(post) -> autentificare cu credentiale (email, username, parola), daca seria de campuri introdusa coincid cu datele
+      unui user existent, atunci vei fi logat si se va genera un token JWT(1h) pentru autentificare (parola este luata si criptata
+      cu bcrypt prin acelasi procedeu ca si la "user_signin" si se compara daca cele 2 valori hash-uite sunt la fel, daca sunt =>
+      parola este corecta si ne genereaza tokenul JWT pentru autentificare, daca nu, afiseaza un mesaj ca parola este gresita)
+      -user_modify(patch) -> modifica datele unui utilizator dupa id
+      -user_delete(delete) -> sterge un utilizator dupa id
+    -meme
+      -meme_get_all(get) -> returneaza toate meme-urile
+      -meme_get_byId(get) -> returneaza un meme dupa id
+      -meme_get_image_byName(get) -> returneaza un meme dupa numele pozei(meme-ului)
+      -meme_create(post) -> creaza un meme(doar daca esti autentificat)
+      -meme_modify(patch) -> modifica un meme(doar daca esti autentificat ca si owner)
+      -meme_delete(delete) -> sterge un meme(doar daca esti autentificat ca si owner)
+  -middleware(check-auth-meme.js + check-meme-ownership.js)
+    -check-auth-meme -> verifica daca esti autentificat pentru a executa CRUD-ul asupra meme-ului
+    -check-meme-ownership -> verifica daca utilizatorul autentificat este cel care a cread meme-ul
+  -env.js -> cheia pentru hash-uire(bcrypt)
+  -package.json + package-lock.json -> configurari + instalari
