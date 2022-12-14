@@ -5,21 +5,27 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Document</title>
+	<title>Memeit</title>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
 		integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 	<link rel="stylesheet" href="main.css">
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap');
+	</style>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+	</style>
 </head>
 
 
 <body>
 
 
+	<!-- login modal -->
 	<div class="container-fluid">
 		<div class="col-md-12">
 			<div class="modal-wraper">
-				<div class="modal fade" id="modal_signin" tabindex="-1" aria-labelledby="exampleModalLabel"
-					aria-hidden="true">
+				<div class="modal fade" id="login_modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
 					<div class="modal-dialog modal-dialog-centered">
 						<div class="modal-content shadow my-5">
 
@@ -53,31 +59,36 @@
 										<div class="row bg-white mx-4 my-5 rounded-3">
 
 											<div class="d-flex flex-grow-1 justify-content-center align-items-center">
-												<h1 class="fw-bold mb-0 fs-2 text-secondary my-5">Welcome back</h1>
+												<h1 class="fw-bold mb-0 fs-2 text-secondary my-5"
+													style="font-family: Merriweather;">Welcome back</h1>
 											</div>
 
 											<!-- Mi au placut mult de tot form urile in stilul asta (cu mica animatie hint->label) asa ca le m pastrat :) -->
 											<form class="mt-4">
 												<div class="form-floating mb-4 mt-5 mx-4">
 													<input type="text" class="form-control rounded-3"
-														id="floating_username_singin" placeholder="username">
-													<label for="floatingInput">
-														<div class="text-primary">Username</div>
+														id="login_floating_input_username" placeholder="username"
+														style="font-family: Merriweather; border: 1px solid #06114F">
+													<label for="login_floating_input_username">
+														<div class="text-primary" style="font-family: Merriweather;">
+															Username</div>
 													</label>
 												</div>
 
 												<div class="form-floating mb-5 mt-5 mx-4">
 													<input type="password" class="form-control rounded-3"
-														id="floating_password_signin" placeholder="parola">
-													<label for="floatingPassword">
-														<div class="text-primary">Parolă</div>
+														id="login_floating_input_password" placeholder="parola"
+														style="border: 1px solid #06114F;">
+													<label for="signin_floating_input_password">
+														<div class="text-primary" style="font-family: Merriweather;">
+															Parolă</div>
 													</label>
 												</div>
 
 												<div class="d-flex justify-content-center align-items-center mb-5">
 													<button class="w-50 mb-2 btn btn-lg rounded-3 btn-secondary mb-5"
-														type="submit" style="width: 60%;">Logare</button>
-												</div>
+														id="login_btn" type="submit" data-bs-dismiss="modal"
+														style="width: 60%; font-family: Merriwether;">Logare</button>
 											</form>
 
 
@@ -94,11 +105,11 @@
 		</div>
 	</div>
 
+	<!-- signup modal -->
 	<div class="container-fluid">
 		<div class="col-md-12">
 			<div class="modal-wraper">
-				<div class="modal fade" id="modal_signup" tabindex="-1" aria-labelledby="exampleModalLabel"
-					aria-hidden="true">
+				<div class="modal fade" id="signin_modal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
 					<div class="modal-dialog modal-dialog-centered">
 						<div class="modal-content shadow my-5">
 
@@ -119,55 +130,59 @@
 												<img src="Vector.jpg" class="img-responsive border-0" alt=""
 													style="height: 25px; width: 25px;">
 											</button>
-
-
-
-
 										</div>
 									</div>
 								</div>
-
 
 								<div class="row bg-secondary pe-5 pt-3 pb-3">
 									<div class="row bg-secondary pe-5 ms-3">
 										<div class="row bg-white mx-4 my-5 rounded-3">
 
 											<div class="d-flex flex-grow-1 justify-content-center align-items-center">
-												<h1 class="fw-bold mb-0 fs-2 text-secondary my-5">Welcome</h1>
+												<h1 class="fw-bold mb-0 fs-2 text-secondary my-5"
+													style="font-family: Merriweather;">Welcome</h1>
 											</div>
 
 											<!-- Mi au placut mult de tot form urile in stilul asta (cu mica animatie hint->label) asa ca le m pastrat :) -->
 											<form class="mt-4">
 												<div class="form-floating mb-4 mt-5 mx-4">
 													<input type="text" class="form-control rounded-3"
-														id="floating_username_singup" placeholder="username">
-													<label for="floatingInput">
-														<div class="text-primary">Username</div>
+														id="signin_floating_input_username" placeholder="username"
+														style="font-family: Merriweather; border: 1px solid #06114F">
+													<label for="signin_floating_input_username">
+														<div class="text-primary" style="font-family: Merriweather;">
+															Username</div>
 													</label>
 												</div>
 
 												<div class="form-floating mb-4 mt-4 mx-4">
 													<input type="text" class="form-control rounded-3"
-														id="floating_email_singup" placeholder="email">
-													<label for="floatingInput">
-														<div class="text-primary">Email</div>
+														id="signin_floating_input_email" placeholder="email"
+														style="font-family: Merriweather; border: 1px solid #06114F">
+													<label for="signin_floating_input_email">
+														<div class="text-primary" style="font-family: Merriweather;">
+															Email</div>
 													</label>
-													<div class="file-upload-wrapper">
+													<!-- <div class="file-upload-wrapper">
 														<input type="file" id="input-file-now" class="file-upload" />
-													</div>
+													</div> -->
 												</div>
 
 												<div class="form-floating mb-5 mt-4 mx-4">
 													<input type="password" class="form-control rounded-3"
-														id="floating_password_signup" placeholder="parola">
-													<label for="floatingPassword">
-														<div class="text-primary">Parolă</div>
+														id="signin_floating_input_password" placeholder="parola"
+														style="border: 1px solid #06114F">
+													<label for="signin_floating_input_password">
+														<div class="text-primary" style="font-family: Merriweather;">
+															Parolă</div>
 													</label>
 												</div>
 
 												<div class="d-flex justify-content-center align-items-center mb-5">
 													<button class="mb-2 btn btn-lg rounded-3 btn-secondary mb-5"
-														type="submit" style="width: 60%;">Creare cont</button>
+														id="signin_btn" type="submit" data-bs-dismiss="modal"
+														style="width: 60%; font-family: Merriweather;">Creare
+														cont</button>
 												</div>
 											</form>
 
@@ -186,32 +201,37 @@
 	</div>
 	</div>
 
-
+	<!-- navbar -->
 	<div class="container-fluid">
 		<nav class="navbar navbar-expand-lg fixed-top bg-white h-auto" style="height: 11%;">
 			<div class="container-fluid">
 				<img src="https://s3-alpha-sig.figma.com/img/37dc/cdcb/dc871de938b58d5252665cc2310a9516?Expires=1671408000&Signature=d0XrYjZJJOu~apBTpNbV17~6cJH23Pmo8FLzlDtY9n1qU7SpXL-0THcSVGHjgPsnIR3iMx0qx5C002-JU1qMZ0BPivAxl7GZpe6lt0TXXkT9AH4WXTx4lcF~koRCdbX6UeHEFykCJmhEa1ayRUPCYD7vWyjROuvTpi7igq1rv88zU~7P4vjzcC53yEMk1WaEyVK7rFvJ2qGllR7rWODnF1FxUxMk8NMrhR3fbhJP1se2WiGaPgvw~hoeGVZiA1WxiwYvf08a29SR7anyqaSRAEk7-y~YVoVuo-vE5oYtqKyNzeeIyJvbTaVIt7EsutRb2zHaY2gnmD~VYYL6~xvmug__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
 					class="mt-2 ms-5" alt="..." style="height: 24%; width: 24%; max-width: 400px; min-width: 150px;">
 				<button class="navbar-toggler border-0 btn-lg" type="button" data-bs-toggle="collapse"
-					data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="true"
-					aria-label="Toggle navigation">
+					data-bs-target="#navbar" aria-controls="navbar" aria-expanded="true" aria-label="Toggle navigation">
 					<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor"
-						class="bi bi-grid-3x3-gap-fill" viewBox="0 0 18 18">
+						class="bi bi-grid-3x3-gap-fill" viewBox="0 0 15.5 16.5">
 						<path
 							d="M1 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2zM1 7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V7zM1 12a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1v-2zm5 0a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v2a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1v-2z" />
 					</svg>
 				</button>
-				<div class="navbar-collapse collapse show" id="navbarsExample09">
+				<div class="navbar-collapse collapse mt-1" id="navbar">
 					<ul class="navbar-nav me-auto">
 					</ul>
 					<div class="row bg-white ms-2">
-						<div class="col-sm-2 col-lg-4">
-							<a class="navbar-text text-primary text-decoration-none mx-4 fs-4" data-bs-toggle="modal"
-								href="#modal_signin">Logare</a>
+						<!-- <div class="col-"></div> -->
+						<div class="col-sm-12 col-lg-4">
+							<a class="navbar-text text-primary text-decoration-none mx-4 fs-4" id="login"
+								data-bs-toggle="modal" href="#login_modal" style="font-family: Merriweather;">Logare</a>
 						</div>
-						<div class="col-sm-4 col-lg-8">
-							<a class="navbar-text text-primary text-decoration-none me-5 fs-4" data-bs-toggle="modal"
-								href="#modal_signup">Creare Cont</a>
+						<div class="col-sm-12 col-lg-8">
+							<a class="navbar-text text-primary text-decoration-none me-5 fs-4 ms-2" id="signin"
+								data-bs-toggle="modal" href="#signin_modal" style="font-family: Merriweather;">Creare
+								Cont</a>
+						</div>
+						<div class="col-sm-12 col-lg-4">
+							<a class="navbar-text text-primary text-decoration-none mx-4 fs-4" id="logout" href="#"
+								style="font-family: Merriweather;">Delogare</a>
 						</div>
 					</div>
 				</div>
@@ -219,7 +239,7 @@
 		</nav>
 	</div>
 
-
+	<!-- on landing -->
 	<div class="row mt-5"></div>
 	<div class="row mt-2"></div>
 	<div class="container-fluid">
@@ -230,28 +250,32 @@
 					<div class="col-md-6">
 						<div class="text-center text-primary mt-5 mx-4">
 							<h1>
-								<p class="fs-1"><strong>
+								<p class="fs-1" style="font-family: Merriweather;">
+									<strong>
 										Partajarea de meme-uri nu a fost niciodată mai simplă!
-									</strong></p>
+									</strong>
+								</p>
 							</h1>
 						</div>
 						<div class="text-center text-primary mt-3 mx-5">
 							<h4>
-								<p class="mx-4 fs-3"><small><small>
+								<p class="mx-4 fs-3" style="font-family: Roboto;"><small><small>
 											Platforma ideală pentru studenții de la Politehnică,
 											amuzați de câte materii o să pice semestrul asta.
 										</small></small></p>
 							</h4>
 						</div>
-						<div class="d-grid gap-2 col-3 mx-auto">
+						<div class="d-grid gap-2 col-xxl-4 col-lg-5 col-md-7 col-sm-5 col-9 mx-auto">
 							<!-- <button type="button" class="btn btn-secondary my-3">Upload a MEME</button> -->
-							<a href="#upload_meme_button_redirect_referrence" class="btn btn-secondary my-3">
-								Upload a MEME
+							<a href="#upload_meme_button_redirect_referrence" class="btn btn-secondary my-3 pt-2">
+								<p class="fs-5 mt-3 ms-1" style="font-family: Merriweather;">
+									Upload a MEME
+								</p>
 							</a>
 						</div>
 					</div>
 					<div class="col-md-6">
-						<div class="card border-0 h-75 w-75">
+						<div class="card border-0 h-75 w-75 mx-auto">
 							<img src="https://s3-alpha-sig.figma.com/img/b231/c12c/c40204f136556ff13e277f2a9b176db8?Expires=1671408000&Signature=KdJuMfcytOd9Y8MTid5OA3qwQTSvSU65t1o4UPv1utSxkN5bguc-TCg2DN7LZp06VqiuWt~NOOQ04BBuI9JUz5WzssQkSOVkbsSPok~nIswKdC-blxYwtFTBeB81NUNmq2fUIxjkeHh4C7oHnH6BdrnaFE0i0JfAinvbQKKeUATaq3bjXfgKGp9cHcUTwwgf3pqamC2wO8F5ef-cIfuVlisFWNiMZEU1DshTn6Qbm4LWjtBJvMm93wFRW6fJFMneqCH2xOaMmfoeZfo9CNd1niHF8sZ6qPeUND9pDMcHrW5M74GQ~O4n~uCIKWf3Tqr3vIoYNOwswxR0UZ5ddXpO~Q__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
 								class="img-fluid" alt="...">
 						</div>
@@ -262,7 +286,7 @@
 			</div>
 		</div>
 
-
+		<!-- upload meme -->
 		<div class="container-fluid px-0" id="meme-add">
 			<div class="row bg-secondary row-cols-auto">
 				<div class="d-flex flex-grow-1 justify-content-center align-items-center">
@@ -272,12 +296,12 @@
 								<div class="row my-5"></div>
 								<div class="text-start text-primary mx-5">
 									<h2>
-										<p><strong>
+										<p style="font-family: Merriweather;"><strong>
 												Ai tupeu și crezi că ești amuzant?
 											</strong></p>
 									</h2>
 									<h5>
-										<p><small><small>
+										<p style="font-family: Roboto;"><small><small>
 													Trimite-ne un mail și poate ai noroc să ne apuce râsul
 													când îți
 													vedem
@@ -294,36 +318,43 @@
 										<div class="mb-1 my-5">
 											<label for="descrierea" class="form-label"></label>
 											<h5>
-												<p><strong><small><small>
+												<p style="font-family: Merriweather;"><strong><small><small>
 																Descriere
 															</small></small></strong></p>
 											</h5>
 											<input type="text" class="form-control" id="descrierea"
-												placeholder="descriere">
+												placeholder="descriere" style="border: 1px solid #06114F;">
 										</div>
 										<div class="mb-1">
 											<label for="meme" class="form-label"></label>
 											<h5>
-												<p><strong><small><small>
+												<p style="font-family: Merriweather;"><strong><small><small>
 																Meme(jpg, jpeg, png, gif)
 															</small></small></strong></p>
 											</h5>
-											<textarea class="form-control" id="meme" rows="6" placeholder="
+											<div class="drop-zone">
+												<span class="drop-zone__prompt">drag & drop image or click to
+													upload</span>
+												<input type="file" id="meme" name="myFile" class="drop-zone__input"
+													style="aspect-ratio: 3/4;">
+											</div>
+											<!-- <textarea class="form-control form-upload" id="meme" rows="6" placeholder="
 
     drag & drop image or click to
-    upload"></textarea>
-											<!-- 
-											<div class="input-group">
-												<div class="row">
-													<input type="file" class="form-control" id="inputGroupFile04"
-														aria-describedby="myButton" aria-label="Upload">
-												</div>
+    upload"></textarea> -->
+
+											<!-- <div class="drop-zone">
+												<span class="drop-zone__prompt">Drop files here or click to upload</span>
+												<input type="file" name="myFile" class="drop-zone__input">
 											</div> -->
 
 										</div>
-										<div class="d-grid gap-2 col-3 mx-auto mb-5">
-											<button type="button" class="btn btn-secondary my-3"
-												id="myButton">Trimite</button>
+										<div
+											class="d-grid gap-2 col-7 col-sm-5 col-md-6 col-xl-7 col-xxl-8 mx-auto mb-5">
+											<button type="button" class="btn btn-secondary my-3 fs-6 py-1" id="myButton"
+												style="font-family: Merriweather;">
+												Trimite
+											</button>
 										</div>
 									</form>
 								</div>
@@ -334,33 +365,36 @@
 			</div>
 		</div>
 
-
+		<!-- top 3 memes -->
 		<div class="container-fluid px-0">
 			<div class="row bg-white row-cols-auto">
 				<div class="d-flex flex-grow-1 justify-content-center align-items-center">
-					<div class="row my-5 mx-4 bg-white">
+					<div class="row my-5 mx-lg-5 mx-md-4 mx-auto bg-white">
 
 						<!-- <div class="card-group mx-auto"> -->
-						<div class="col-md-4 mt-5 d-flex flex-grow-1 justify-content-center align-items-center">
+						<div class="col-md-4 mt-sm-5 mt-md-5 mt-5 d-flex flex-grow-1 justify-content-center">
 							<!-- <div class="card border-0 h-100 w-100"> -->
 							<img src="https://s3-alpha-sig.figma.com/img/2401/095c/e219899b00ace2c893bfb0561f50b0a9?Expires=1671408000&Signature=U1Kk5ijW2ZqKTaj1ZmRAG-Wx2VSg6cFbnSTtzzVshcs0Nkg7Caip3Ai7HvbfMnjazzSCr~AzV~s5TGLkQTJkBWeSR3r0YNWOCbkgV3WQfCKL3j723R6hJXieYjbGH~R05CvIMe4eCmLAkHa26wRIVCgodIewbwbACq8Q0g~wzMv~ZTi23W48jCOwClFE0hKUVo22XjpHqgh53tHKGBgYYqoU6g9dNpLBSPHWHJ9LtEVG8V-VCyGAUK~LUfOCEP2-OrmHqO8CM77S5eGORQIRAO~AQ2R9Hznc~rL8O19pKSUjEHAcq5rujN7AS3HPPrs8TqLXvZSUVa87vlu8Yud~uQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
-								class="img-fluid rounded-5 w-100" alt="..." style="height: 75%;">
+								class="img-fluid rounded-5 w-100" alt="..." id="top_meme_1"
+								style="height: 75%; max-width: 380px; aspect-ratio: 3/4;">
 							<!-- </div> -->
 						</div>
 
 
-						<div class="col-md-4 mt-5 d-flex flex-grow-1 justify-content-center align-items-center">
+						<div class="col-md-4 mt-sm-0 mt-md-5 mt-5 d-flex flex-grow-1 justify-content-center">
 							<!-- <div class="card border-0 h-100 w-100"> -->
 							<img src="https://s3-alpha-sig.figma.com/img/a9bb/727c/e2598f171f781d358d47f8604dedc5f2?Expires=1671408000&Signature=TnmzfkbgRUyphMLiv9gosL1Zk-k0OQGl7uXEFfJIHaKdQPyJp6orwyhCrMun80HybKimPLmNiDGmA8muIJy49lMcGpQLMFLisnkqlUhEI77beSeAVBci64-NIv6pUBqcHK~w01qSMsro59nPcDdJVvkg9Gq3hCZ0JmQwCJhUHVzVd9MgF66i8ooY8zY9RRwzugBmpj5FSKeGI1NOv4OyYebmErUPzDFXDYeTT8ns0twsjomYRwd28r5Q4aYk9xpypkXOhly38v-J6Xf8LwjcwRWlDTiIixVJaUK5Md2Ed-c45r0a3sZ8AbTqk3m7RsTzqjsFajqrJWJ5ubWTVl8jnQ__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
-								class="img-fluid rounded-5 w-100" alt="..." style="height: 75%;">
+								class="img-fluid rounded-5 w-100" alt="..." id="top_meme_2"
+								style="height: 75%; max-width: 380px; aspect-ratio: 3/4;">
 							<!-- </div> -->
 						</div>
 
 
-						<div class="col-md-4 mt-5 d-flex flex-grow-1 justify-content-center align-items-center">
+						<div class="col-md-4 mt-sm-0 mt-md-5 mt-5 d-flex flex-grow-1 justify-content-center">
 							<!-- <div class="card border-0 h-100 w-100"> -->
 							<img src="https://s3-alpha-sig.figma.com/img/8ac8/9cc3/354953356ad7b707fdf3b99dde9bc45f?Expires=1671408000&Signature=Z4P4BKA3vmx~BRD9WTvM5TAapR60WcSibm1yH3FW4V3ZOu6frdSyoIhGv~NZaIrDD6LS~PUEtEA9Y0-LkPxh3YFg0CUObAsGOUDe3JkpPgfDoTFxAIXOJMBQLLJdtKQ9oYfdH3XqWhCbyQvH5TQwSDA4hn71moXCGIBcnEGoD1QO~K1vnk0hcAY2wJdXf5LiZkSgpGCSRuGbb9qExiig~~Fj-8FLFuBji6Q3DUSVhTtb7DAROttbNszVfo1yW5LwUx1IbZN972K2zVFOf3MrVgkB97T6vDhhTxpkWGgxKqyc5p5wLNGSJF~1rb~Dt9wd1L4YX6qwhX53enGPJgakUw__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA"
-								class="img-fluid rounded-5 w-100" alt="..." style="height: 75%;">
+								class="img-fluid rounded-5 w-100" alt="..." id="top_meme_3"
+								style="height: 75%; max-width: 380px; aspect-ratio: 3/4;">
 							<!-- </div> -->
 						</div>
 						<!-- </div> -->
@@ -370,7 +404,7 @@
 			</div>
 		</div>
 
-
+		<!-- footer -->
 		<div class="container-fluid px-0">
 			<div class="row bg-primary">
 				<footer class="d-flex flex-wrap py-4 bg-dark">
@@ -408,7 +442,10 @@
 					</div>
 					<div class="col-12 d-flex flex-grow-1 justify-content-center align-items-center">
 						<div class="d-flex flex-grow-1 justify-content-center align-items-center">
-							<p class="text-white fs-5 ">Copyright 2022 | La muncă, nu la întins mâna.</p>
+							<p class="text-white fs-5" style="font-family: Merriweather;">
+								Copyright 2022 | La muncă, nu
+								la întins mâna.
+							</p>
 						</div>
 					</div>
 				</footer>
@@ -424,6 +461,10 @@
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js"
 			integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V"
 			crossorigin="anonymous"></script>
+		<script src="login.js"></script>
+		<script src="dropbox.js"></script>
+
 </body>
 
 </html>
+	

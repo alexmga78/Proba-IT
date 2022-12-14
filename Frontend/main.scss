@@ -4,12 +4,6 @@ $theme-colors: (
 	"dark": #06114F,
 );
 
-.img-responsive {
-	width: auto;
-	height: 100px;
-}
-
-
 body.modal-open .container{
     -webkit-filter: blur(4px);
     -moz-filter: blur(4px);
@@ -20,14 +14,10 @@ body.modal-open .container{
 filter:progid:DXImageTransform.Microsoft.Blur(PixelRadius='4');
 }
 
-#meme-img {
-	width: 200px;
-	height: 200px;
-}
 
 
 input[type="file"] {
     display: block;
 }
 
-@import "node_modules/bootstrap/scss/bootstrap.scss"
+// @import "node_modules/bootstrap/scss/bootstrap.scss"
