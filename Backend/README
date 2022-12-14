@@ -19,6 +19,8 @@ Pentru rulare local(npm install [syntax]):
 
 UPDATE(14.12.2022): catch() pentru eroare in cazul in care da fail la conectarea bazei de date
 
+!!Serverul local porneste doar cu npm start (daca ai adaugat si package.json + package-lock.json, dupa merge testat direct din postman)
+
   VARIANTA EXPLICATA ("-" sunt in ordine cronologica)
   -server.js -> hostarea cu MongoDB
   -index.js -> legatura cu MongoDB
