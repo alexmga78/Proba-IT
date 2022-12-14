@@ -17,7 +17,23 @@ UPDATE: -img: aspect-ratio
         -font Merryweather/Robo, fisiere.js pentru
         -logare/formular de upload meme
         -dimensiuni diverse schimbate pentru incadrari si responsiveness
+        -main.css fara "bootstrap bundle"
 
+
+
+  VARIANTA EXPLICATA
+  -.hintrc -> scoate hinturile pentru <input> fara <label>
+  -main.css -> caracteristicile elementelor customizate
+  -main.css.map -> legatua dintre "main.scss" si "main.css" (pentru Watch Sass)
+  -main.scss -> pentru configurarea mai usoara a "main.css" (cu Watch Sass)
+  -index.html -> elementele paginii web
+  -login.js -> logare/creare cont/delogare si tine minte permanent starea curenta cu "local storage" (stare verificata mereu la intrare in
+  login.js si afiseaza "logare/creare cont" daca esti delogat sau "delogare" daca esti logat)
+  -dropbox.js -> 'vreau sa zic ca a am traume de la asta' -> primeste o imagine prin drag&drop/select si o afiseaza in "drop-zone" (pana la
+  refresh-ul paginii)
+  -package.json + package-lock.json -> configurari si instalari
+  -Vector.jpg -> poza pentru butonul de "x" al modalelor "logare"/"creare cont"
+  
 
   VARIANTA "NU AM TIMP, VREAU SOLUTIA ODATA"
   1) Inceput (fiecare row, principal, intr-un container)
@@ -40,7 +56,7 @@ UPDATE: -img: aspect-ratio
   
 
 
-  VARIANTA EXPLICATA:
+  VARIANTA LUNGA:
   Cel mai greu lucru a fost sa incep, n am mai facut frontend decat in XML pe Android Studio, in rest nici nu stiam unde trebuie
 scris codul, prima data credeam ca Bootstrap e ceva ca CodeBlocks in care intrii sa codezi :)))
 
