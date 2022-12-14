@@ -1,5 +1,5 @@
 
-Tot front-ul intr-un singur branch pentru ca e facut intr-o zi si putin talpa
+Tot front-ul intr-un singur branch pentru ca e facut intr-o zi si putin talpa + o juma de zi pentru mici finisari :)
 
 Facut cu bootstrap (html, css, scss), m am apucat de el pe 8, pagina este responsive (bootstrap <3)
 
@@ -10,13 +10,22 @@ Pentru rulare local(npm install [syntax]):
 -scss
 -@popperjs/core (npm install [syntax] --save)
 
+
+UPDATE: -img: aspect-ratio
+        -logare/creare cont/delogare - local storage
+        -drag&drop/select meme upload formular
+        -font Merryweather/Robo, fisiere.js pentru
+        -logare/formular de upload meme
+        -dimensiuni diverse schimbate pentru incadrari si responsiveness
+
+
   VARIANTA "NU AM TIMP, VREAU SOLUTIA ODATA"
   1) Inceput (fiecare row, principal, intr-un container)
   -fiecare task cate un row
   -in fiecare row col(md-) (responsiveness)
   -mesaj text (col stanga) + imagine (col dreapta)
   -mesaj text "provocator" (col stanga) + forms upload meme (col dreapta)
-  -top 3 memes (3 col md-4) + img responsive (style %)
+  -top 3 memes (3 col md-4) + img responsive (style % + aspect-ratio)
   
   2) Mijloc
   -footer + insta/twitter/meta + "la munca baietii"
@@ -25,9 +34,9 @@ Pentru rulare local(npm install [syntax]):
 
   3) Final
   -popups (logare/creare cont) cu: fundal negru blurat
-  -link "upload a meme" -> formulare de upload meme
+  -link "upload a meme" -> formulare de upload meme + incarcare poza
   -polish: culori, colturi rotunde, incadrarea in pagina, incarcarea pozelor/imaginilor, schimbarea elementelor
-  in elementele-imagini cerute
+  in elementele-imagini cerute + font Merriweather/Robo
   
 
 
