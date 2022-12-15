@@ -1,5 +1,5 @@
 # Proba-IT
-Proba Tehnica IT (LSAC)
+Proba Tehnica IT (LSAC) - toate task-urile sunt facute
 
 "Readme-urile se gasesc la fiecare parte (frontend/backend)"
 
